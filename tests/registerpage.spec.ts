@@ -5,7 +5,9 @@ test("User Register Sucessifully", async({page})=>{
 
     const registerPage = new RegisterPage(page);
 
-    await page.goto("https://www.playwrightautomation.com/");
+    await page.goto("https://www.playwrightautomation.com/", {
+    waitUntil: "domcontentloaded",
+    });
 
     await page.getByTestId("pw-header-login").click();
     await expect(page).toHaveURL("https://www.playwrightautomation.com/login.html");
