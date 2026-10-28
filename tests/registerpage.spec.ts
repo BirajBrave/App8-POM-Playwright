@@ -6,7 +6,7 @@ test("User Register Sucessifully", async({page})=>{
     const registerPage = new RegisterPage(page);
 
     await page.goto("https://www.playwrightautomation.com/", {
-    waitUntil: "domcontentloaded",
+        waitUntil: "domcontentloaded",
     });
 
     await page.getByTestId("pw-header-login").click();
